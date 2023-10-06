@@ -245,8 +245,10 @@
             <form class="input-container">
                 <input type="text" id="nameInput" placeholder="Ім'я*" class="bottom-border" required autocomplete="off">
                 <input type="tel" id="phoneInput" placeholder="Телефон* 093-100-0000" class="bottom-border" autocomplete="off" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                <label for="messageTextarea">Повідомлення</label>
-                <textarea id="messageTextarea" autocomplete="off" class="bottom-border"></textarea>
+                <div>
+                    <label for="messageTextarea">Повідомлення</label>
+                    <textarea id="messageTextarea" autocomplete="off" class="bottom-border"></textarea>
+                </div>
                 <button class="button" type="submit">відправити</button>
             </form>
         </div>
@@ -284,6 +286,6 @@
         </ul>
     </section>
     <a id="scrollButton" href="#nav" class="button hidden">На початок</a>
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
 </body>
 </html>
