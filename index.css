@@ -65,6 +65,7 @@ header {
   }
 
   .sidebar{
+    width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,7 +96,6 @@ header {
 .socials{
     display: flex;
     gap: 15px;
-    margin-left: 60px;
     font-size: 11px;
     line-height: 15px;
     letter-spacing: 0.2em;
@@ -127,14 +127,16 @@ header {
     width: 1125px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
     padding: 40px 20px;
     background-image: url(images/Slider_img_3.png);
     background-origin: padding-box;
     background-repeat: no-repeat;
     background-position: center;
     color:white;
+
+    align-content: center;
+    flex-direction: column-reverse;
+    justify-content: space-around;
 }
 
 .header {
@@ -149,71 +151,6 @@ header {
 
 .nav{
     display: none;
-}
-
-.contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row-reverse;
-    gap: 20px;
-}
-
-.contact > li {
-    border-radius: 20px;
-}
-
-.contact > li:hover:nth-child(2) {
-    padding: 12px 24px;
-    color: white;
-    background-color: #FF6C00;
-    transition: ease-in-out 0.3s;
-}
-
-@media screen and (min-width: 768px) {
-  .hero{
-    display: block;
-    padding: 40px 35px 40px 20px;
-  }
-
-  .header {
-    height: 76px;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .nav {
-    width: 100%;
-    display: flex;
-    gap: 15px;
-  }
-
-  .contact{
-    display: flex;
-    justify-content: center;
-    flex-direction: row-reverse;
-    gap: 30px;
-  }
-}
-
-@media screen and (min-width: 1150px) {
-  .hero{
-    padding: 30px 55px 40px 40px;
-  }
-
-  .header {
-    height: 48px;
-    align-items: center;
-  }
-
-  .nav {
-    width: 50%;
-    gap: 30px;
-  }
-
-  .contact{
-    align-items: center;
-  }
 }
 
 .button {
@@ -238,10 +175,63 @@ header {
     background-color: #FF6C00;
 }
 
-.title {
-    margin-top: 155px;
-    /* margin-left: 50px; */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+
+.contact > li:nth-child(2) .button {
+    border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero{
+    display: block;
+    padding: 40px 35px 40px 20px;
   }
+
+  .header {
+    height: 76px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+  }
+
+  .contact{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .hero{
+    padding: 30px 55px 40px 40px;
+  }
+
+  .header {
+    height: 48px;
+    align-items: center;
+  }
+
+  .nav {
+    width: 50%;
+    gap: 30px;
+  }
+
+  .contact{
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .title div {
     font-size: 11px;
@@ -338,6 +328,100 @@ header {
 }
 
 @media screen and (min-width: 1150px) {
+}
+
+/* ------------menu----------- */
+
+.menu-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left:20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 5;
+}
+ 
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #9DA4BD;
+    transition: ease-in-out 0.15s;
+}
+.menu-btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu-btn > span::after {
+    content: '';
+    top: 8px;
+}
+ 
+.menubox{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+}
+ 
+.menu-item {
+    display: block;
+    padding: 12px 24px;
+    color: #9DA4BD;
+    font-size: 20px;
+    font-weight: 600;
+    transition-duration: 0.25s;
+}
+.menu-item:hover {
+    color: #FF6C00;
+    background-color: #CFD8DC;
+}
+ 
+#menu-toggle{
+  opacity: 0;
+  display: none;
+}
+
+#menu-toggle:checked + .menu-btn{
+    position: fixed;
+}
+ 
+#menu-toggle:checked ~ .menu-btn > span{
+  transform: rotate(45deg);
+
+}
+#menu-toggle:checked ~ .menu-btn > span::before{
+  top: 0;
+  transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menubox{
+  visibility: visible;
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .burger-menu {
+        display: none;
+    }
 }
 
 /* -----------about-------- */
@@ -544,9 +628,12 @@ header {
 .prices li {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    gap: 5px;
 }
 
 .prices span {
+    flex-shrink: 1;
     font-size: 14px;
     font-weight: 400;
     line-height: 30px;
@@ -560,15 +647,17 @@ header {
     margin-right: auto;
 }
 
-.dots {
+.prices .dots {
     align-self: flex-end;
     display: inline-block;
-    flex-shrink: 2;
-    width: 230px;
+    flex-grow: 1;
+    max-width: 400px;
     height: 1px;
-    background-color: #9DA4BD;
+    background: #9DA4BD1F;
     margin-right: 0px;
     margin-bottom: 7px;
+
+    align-self: flex-end;   
 }
 
 @media screen and (min-width: 768px) {
@@ -858,6 +947,7 @@ footer {
 .form{
     padding: 100px 20px 100px 40px;
     background: #191C26;
+    z-index: -1;
 }
 
 .form h3 {

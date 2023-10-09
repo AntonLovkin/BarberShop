@@ -21,6 +21,21 @@
         </div>
         <div class="hero" id="hero">
             <div class="header">
+                <div class="burger-menu">
+                    <input id="menu-toggle" type="checkbox" />
+                    <label class="menu-btn" for="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                
+                    <ul class="menubox">
+                        <li><a class="menu-item" href="#about">Про нас</a></li>
+                        <li><a class="menu-item" href="#services">Послуги и ціни</a></li>
+                        <li><a class="menu-item" href="#staff">Майстри</a></li>
+                        <li><a class="menu-item" href="#contacts">Контакти</a></li>
+                    </ul>
+                </div>
                 <ul class="nav">
                     <li><a href="#about">Про нас</a></li>
                     <li><a href="#services">Послуги и ціни</a></li>
@@ -31,7 +46,7 @@
                     <li>
                         <a href="#contacts" class="button">онлайн-запис</a>
                     </li>
-                    <li><a href="tel:+380441111111" target="_blank">+38 044 111 11 11</a></li>
+                    <li><a href="tel:+380441111111" class="button" target="_blank">+38 044 111 11 11</a></li>
                 </ul>
             </div>
             <div class="title">
@@ -76,33 +91,39 @@
             <ul class="prices">
                 <li>
                     <span>Чоловіча стрижка</span>
+                    <span class="dots"></span>
                     <span>від 300 грн.</span>
                 </li>
                 <li>
                     <span>Стрижка бороди</span>
+                    <span class="dots"></span>
                     <span>від 200 грн.</span>
                 </li>
                 <li>
                     <span>Стрижка вусів</span>
+                    <span class="dots"></span>
                     <span>від 200 грн.</span>
                 </li>
                 <li>
                     <span>Гоління небезпечною бритвою</span>
+                    <span class="dots"></span>
                     <span>від 200 грн.</span>
                 </li>
             </ul>
             <ul class="prices">
                 <li>
                     <span>Cтрижка у стажера</span>
-                    <span>.............................................</span>
+                    <span class="dots"></span>
                     <span>від 50 грн.</span>
                 </li>
                 <li>
                     <span>Стрижка під насадку</span>
+                    <span class="dots"></span>
                     <span>від 200 грн.</span>
                 </li>
                 <li>
                     <span>Дитяча стрижка (до 12 років)</span>
+                    <span class="dots"></span>
                     <span>від 300 грн.</span>
                 </li>
                 <li>
@@ -286,6 +307,6 @@
         </ul>
     </section>
     <a id="scrollButton" href="#nav" class="button hidden">На початок</a>
-    <!-- <script src="index.js"></script> -->
+    <script src="index.js"></script>
 </body>
 </html>
