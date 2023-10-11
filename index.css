@@ -51,18 +51,11 @@ header {
 }
 
 .container{
-    /* max-width: 480px; */
     width: 100vw;
 }
 
 .sidebar{
     display: none;
-/* 
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; */
 }
 
 @media screen and (min-width: 481px) {
@@ -76,18 +69,6 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    /* max-width: 768px; */
-  }
-
-  /* .sidebar{
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  } */
-
   .sidebar{
     margin-left: 55px;
   }
@@ -312,16 +293,6 @@ header {
     margin-top: 190px;
     margin-left: 60px;
   }
-
-  /* .title h1{
-    font-size: 72px;
-    line-height: 85px;
-  } */
-
-  /* .title p {
-    font-size: 18px;
-    line-height: 30px;
-  } */
 }
 
 .sliders {
@@ -908,14 +879,6 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-    /* .staff h3 {
-        font-family: 'Raleway';
-        font-size: 42px;
-        font-weight: 700;
-        line-height: 49px;
-        letter-spacing: 0.05em;
-    } */
-
     .workers{
         margin-top: 40px;
         gap: 30px;
@@ -931,14 +894,6 @@ header {
         display: block;
         justify-content: center;
         padding: 155px 49px;
-    }
-
-    .workers{
-        /* gap: 30px; */
-    }
-
-    .worker {
-        /* max-width: 370px; */
     }
 }
 
@@ -1178,7 +1133,7 @@ textarea:focus {
     }
 }
 
-/* --------------------------------- */
+/* ----------copyright & socials------------ */
 
 .copyright{
     position: relative;
