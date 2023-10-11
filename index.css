@@ -51,7 +51,7 @@ header {
 }
 
 .container{
-    width: 100vw;
+    width: 100%;
 }
 
 .sidebar{
@@ -378,7 +378,8 @@ header {
     list-style: none;
     background-color: #ECEFF1;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-    transition-duration: .25s;
+    transition: ease-in-out 0.4s;
+    z-index: 1;
 }
  
 .menu-item {
@@ -387,7 +388,7 @@ header {
     color: #9DA4BD;
     font-size: 20px;
     font-weight: 600;
-    transition-duration: 0.25s;
+    transition: ease-in-out 0.4s;
 }
 .menu-item:hover {
     color: #FF6C00;
@@ -911,6 +912,7 @@ header {
 .examples{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
     margin-top: 40px;
 }
@@ -956,7 +958,6 @@ footer {
 .form{
     padding: 100px 20px 100px 40px;
     background: #191C26;
-    z-index: -1;
 }
 
 .form h3 {
@@ -974,6 +975,7 @@ footer {
     margin: 40px 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 40px;
     background-color: transparent;
 }
@@ -1019,6 +1021,14 @@ input:focus::placeholder {
 
 textarea {
     width: 100%;
+    color: #FFFFFF;
+}
+
+textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
 }
 
 label {
@@ -1091,7 +1101,7 @@ textarea:focus {
 @media screen and (min-width: 768px) {
     .form, .contacts{
         width: 100%;
-        padding: 100px 0 100px 40px;
+        padding: 100px 40px 100px 40px;
     }
 
     .form h3 {
