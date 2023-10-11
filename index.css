@@ -51,25 +51,45 @@ header {
 }
 
 .container{
-    max-width: 480px;
+    /* max-width: 480px; */
     width: 100vw;
 }
 
 .sidebar{
     display: none;
+/* 
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+@media screen and (min-width: 481px) {
+    .sidebar{
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    /* max-width: 768px; */
   }
 
-  .sidebar{
+  /* .sidebar{
     width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  } */
+
+  .sidebar{
+    margin-left: 55px;
   }
 }
 
@@ -84,7 +104,7 @@ header {
 }
 
 .logo {
-    width: 55px;
+    width: 70px;
     margin-top: 32px;
 }
 
@@ -269,17 +289,10 @@ header {
     color: #9DA4BD;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     .title {
     margin-top: 155px;
     margin-left: 100px;
-  }
-}
-
-@media screen and (min-width: 1150px) {
-    .title {
-    margin-top: 190px;
-    margin-left: 60px;
   }
 
   .title h1{
@@ -291,6 +304,24 @@ header {
     font-size: 18px;
     line-height: 30px;
   }
+
+}
+
+@media screen and (min-width: 1150px) {
+    .title {
+    margin-top: 190px;
+    margin-left: 60px;
+  }
+
+  /* .title h1{
+    font-size: 72px;
+    line-height: 85px;
+  } */
+
+  /* .title p {
+    font-size: 18px;
+    line-height: 30px;
+  } */
 }
 
 .sliders {
@@ -793,11 +824,19 @@ header {
 .staff {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 100px 40px;
     padding: 100px 40px;
     background-color: #f7f7f7e8;
 }
+
+.staff h3 {
+        font-family: 'Raleway';
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 49px;
+        letter-spacing: 0.05em;
+    }
 
 .staff .info span{
     text-transform: uppercase;
@@ -862,13 +901,28 @@ header {
     background-color: #FF6C00;
 }
 
+@media screen and (min-width: 600px) {
+    .worker {
+        max-width: 450px;
+    }
+}
+
 @media screen and (min-width: 768px) {
+    /* .staff h3 {
+        font-family: 'Raleway';
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 49px;
+        letter-spacing: 0.05em;
+    } */
+
     .workers{
         margin-top: 40px;
+        gap: 30px;
     }
 
     .worker {
-        max-width: 450px;
+        max-width: 370px;
     }
 }
 
@@ -880,11 +934,11 @@ header {
     }
 
     .workers{
-        gap: 30px;
+        /* gap: 30px; */
     }
 
     .worker {
-        max-width: 370px;
+        /* max-width: 370px; */
     }
 }
 
